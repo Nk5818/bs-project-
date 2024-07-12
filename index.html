@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap By SKILLHUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+        integrity="sha512-SJw7jzjMYJhsEnN/BuxTWXkezA2cRanuB8TdCNMXFJjxG9ZGSKOX5P3j03H6kdMxalKHZ7vlBMB4CagFP/de0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .menu-active {
+            border-radius: 0.5rem;
+            transition: 300ms;
+        }
+
+        .menu-active:hover {
+            background-color: #fff;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- sercherch start -->
+    <!-- .collapse#search -->
+    <div class="collapse" id="search">
+
+
+        <div class="alert alert-primary m-0">
+            <div class="container">
+
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-primary">search</button>
+                </div>
+                <h5 class="mt-4">populer search</h5>
+                <div class="row">
+                    <div class="col-sm-3 d-block">
+                        <a class="d-block my-2" href="">fake link</a>
+                        <a class="d-block my-2" href="">fake link</a>
+                        <a class="d-block my-2" href="">fake link</a>
+                        <a class="d-block my-2" href="">fake link</a>
+                    </div>
+                    <div class="col-sm-3 d-block">
+                        <a class="d-block my-2" href="">fake link</a>
+                        <a class="d-block my-2" href="">fake link</a>
+                        <a class="d-block my-2" href="">fake link</a>
+                        <a class="d-block my-2" href="">fake link</a>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img class="img-fluid"
+                                            src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/h/a/o/-original-imagykgpg4rt5kxm.jpeg?q=70"
+                                            alt="">
+                                    </div>
+                                    <div class="col-sm-6 ">
+                                        <h4>feathured products</h4>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                        <button type="button" class="btn btn-outline-primary">shop now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#search">Primary</button> -->
+
+    <!-- sercherch end -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+        <div class="container">
+            <!-- <div> <i class="bi bi-trophy-fill"></i></div> -->
+            <img class="img-fluid "
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEc0lEQVR4AayWA5AsQQyGs3w41tWzbdu2bdu2bdu2bdu2bRt397+qZGq69rSzb/evyqIn3f1NJp0JATAD6AfgBTQ9fPgQq1evxuzZszFr1iy3bdWqVbh//z6U8ELb00zyQ/T27VvUqlULZrMZRORJ4zUrV66Mly9fQgn9SKPB69evkTx5cnYO8CE0Kk7oWZNQLhehcQlC/zquWYsyhJJZCT1rEJqUJET3E5CECRPi2bNneiQImqpXr84ORTIR3q0lYLey4F3ybdxCz/m0gVA2h0CULl0a0MQAd+/e5RBF8yW8XyeTV/cl9KlFuDzLhY2PZQYOJ9b/35hL6FubsKwHIWgX4csmQtxoBJPJhMuXLyuAhQsXMlmz0jJxeU/17Py8CK9XG9h8byTgei/gUlP9jiXsYrM7il/nKvJ/6tSpCmD8+PE8OKwhO/HzI1K2f7QRgCgCcLkF/z8z1XGNBsXEb1xz+T9kyJDQACObiFPTko6T9436D4ApjmvUL6oBtJD/gwcPVgATJ04Uqgbi1La85wEaFXeMwLBhwxTA0qVLQcShZ6cpbTwNoKLbRXKAC5QOcPPmTR5MFocQuJPwahXBJ6rnAKLYCY+WyunKlFTGzp07pwCCg4ORJUsWvrBhgHYSehEsZvcBzCbCvM7is2ekjKVKlQqBgYEKAADXfiJCvGgSAeyW7M+VmnBwjOsA56YRsqcg7BzO17m4JY0tAAsWLABLAUgUqlSpwg5pEhBuL1CLB+1yFcCxEj5YTMishb5kyZIICgoKBcD68uULChUqxI5ekQk9ahAuzST83WEAYH8AcKM3cKkxsFty6cosrqZ6PuXKlQsfPnwAKzSA6OfPn+jYsSNsNpueRJsGOdl8nxdwvroAnC7KY3tHqSS0WCxo3bo1vn//DiUFEKbu3LmDihUr8gL96kSw+YW6wI1esvmVNsBeLx4f2UR/8fApUzIGwLpw4QK/OGIHSG0PG6AGcKUtcKYMsM+bx75tJiSMKQDHjx9HRCI4Ubly5eROshO+bnKeC9+3ECrlkc2LFi3Kye0OAHcwSZMmBZEco+ntJLkCdzqekquz5Y2XKp5sHidOHDx+/BjORDCg58+fo3jx4g6l9eUqBfBlo1602HLmzMk9Bst9AFUn9uzZg2jRooUC+KwBeHt7Y9OmTXqV8xQAbz537lz9UYQNoPd83GxwsfEUQJ8+fXhxk4mQNiGhYHpu3VTibSYUyUjIkJhrP/t26NDBPYCPHz/iwIEDXLfNZjNXxh3DnJ+CA2O4jePjO3PmTOzbtw/v3793DWD58uXw9fV1SLqB9Yw3p2O56VDm5eWFefPmGQLgqmW32zncqWP7IFtCf7bV3fxxbZox29yH57CljeMDs8kEq9XKPYAzAG6ViAiFU0bDhBoZPGIl08bkNbt37+4coEuXLuxcO0c8jwE0ypOA12zatGmYAC/CAkgf1xf/5qEtThVsKMsPNjMpKQlmDUrXrAaLA6iNcTmgBqN7vn///v/d3d00wTt27MDongMARFiBI4X6mDEAAAAASUVORK5CYII="
+                alt="">
+            <a class="navbar-brand" href="#">SKILLHUB</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <!-- <div class="dropdown"> -->
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown">
+                        menu
+                    </button>
+                    <ul class="dropdown-menu w-100 p-0 border-bottom border-5 border-primary rounded-0 border-top-0">
+                        <div class="alert alert-primary m-0">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="d-flex mb-4  p-4 menu-active">
+                                            <i class="bi bi-laptop fs-1"></i>
+                                            <div>
+                                                <h3>Laptop</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="d-flex mb-4 gap-3  p-4 menu-active">
+                                            <i class="bi bi-laptop fs-1"></i>
+                                            <div>
+                                                <h3>Laptop</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="d-flex mb-4 gap-3  p-4 menu-active">
+                                            <i class="bi bi-laptop fs-1"></i>
+                                            <div>
+                                                <h3>Laptop</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="d-flex mb-4  p-4 menu-active">
+                                            <i class="bi bi-laptop fs-1"></i>
+                                            <div>
+                                                <h3>Laptop</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="d-flex mb-4 gap-3  p-4 menu-active">
+                                            <i class="bi bi-laptop fs-1"></i>
+                                            <div>
+                                                <h3>Laptop</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="d-flex mb-4 gap-3  p-4 menu-active">
+                                            <i class="bi bi-laptop fs-1"></i>
+                                            <div>
+                                                <h3>Laptop</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="collapse"
+                    data-bs-target="#search"><i class="bi bi-search"></i></button>
+
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#cart"><i
+                        class="bi bi-cart"></i></button>
+                <button type="button" class="btn btn-light" data-bs-toggle="offcanvas"
+                    data-bs-target="#login">Login</button>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- navbar start -->
+
+    <!-- login offcanwas start -->
+
+    <div class=" offcanvas offcanvas-end" id="login">
+        <div class="offcanvas-header bg-primary text-light">Login</div>
+        <div class="offcanvas-body">
+            <label for="">Enter Email</label>
+            <input type="text" class="form-control " placeholder="Exampale@nk.gmail.com" name="" id="">
+            <label for="">Enter password</label>
+            <input type="text" class="form-control " placeholder="Enter password" name="" id="">
+            <button type="button" class="btn btn-primary mt-3">Login</button>
+
+        </div>
+    </div>
+
+
+    <!-- login offcanwas end -->
+
+    <!--cart offvanwas stasrt  -->
+    <div class=" offcanvas offcanvas-end" id="cart">
+        <div class="offcanvas-header bg-primary text-light">cart</div>
+        <div class=" alert alert-secondary">
+
+            <div class="container  ">
+
+                <div class="offcanvas-body bg-light ">
+                    <div class="row ">
+                        <div class="col-sm-3">
+                            <img class="img-fluid"
+                                src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/h/a/o/-original-imagykgpg4rt5kxm.jpeg?q=70"
+                                alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>dell xps 13pro</h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <strong> 99,999</strong>
+                        </div>
+                        <div>
+                            <p>You have saved 14,500/- on this order</p>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-danger">Left</button>
+                            <button type="button" class="btn btn-outline-danger">Middle</button>
+                            <button type="button" class="btn btn-outline-danger">Right</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-body bg-light ">
+                    <div class="row ">
+                        <div class="col-sm-3">
+                            <img class="img-fluid"
+                                src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/h/a/o/-original-imagykgpg4rt5kxm.jpeg?q=70"
+                                alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>dell xps 13pro</h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <strong> 99,999</strong>
+                        </div>
+                        <div>
+                            <p>You have saved 14,500/- on this order</p>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-danger">Left</button>
+                            <button type="button" class="btn btn-outline-danger">Middle</button>
+                            <button type="button" class="btn btn-outline-danger">Right</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!--cart offvanwas end  -->
+
+
+
+
+        <!-- navbar end -->
+        <!-- carousel start -->
+        <div id="carouselExampleCaptions" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="1000">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-sm-6 text-end">
+                            <img class="img-fluid"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ591jg6pFSYZ5X8k-efx2CItPPjazI6kpFpw&usqp=CAU"
+                                alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <h1>Fake Product</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, quidem.</p>
+                            <button type="button" class="btn btn-primary btn-sm">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="row">
+                        <div class="col-sm-6 text-end">
+                            <img class="img-fluid"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ591jg6pFSYZ5X8k-efx2CItPPjazI6kpFpw&usqp=CAU"
+                                alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <h1>Fake Product</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, quidem.</p>
+                            <button type="button" class="btn btn-primary btn-sm">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- carousel end -->
+        <!-- features starts -->
+        <div class="bg-primary mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="d-flex py-3 gap-4 align-items-center text-light">
+                            <i class=" bi bi-credit-card fs-1"></i>
+                            <div>
+                                <h3>Secure Checkout</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="d-flex py-3 gap-4 align-items-center text-light">
+                            <i class=" bi bi-credit-card fs-1"></i>
+                            <div>
+                                <h3>Secure Checkout</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="d-flex py-3 gap-4 align-items-center text-light">
+                            <i class=" bi bi-credit-card fs-1"></i>
+                            <div>
+                                <h3>Secure Checkout</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- features end -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
